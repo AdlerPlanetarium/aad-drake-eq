@@ -4,6 +4,8 @@ import React from 'react'
 import { render } from 'react-dom'
 import { Router, Route, Link } from 'react-router'
 
+import Data from 'sample-data'
+
 import RStar from 'components/rstar'
 import Fp from 'components/fp'
 import Default from 'components/default'
@@ -14,6 +16,7 @@ let App = React.createClass({
       <div className='app'>
       <p>app</p>
       {this.props.children}
+      <p>{JSON.stringify(Data)}</p>
       </div>
     );
   }
