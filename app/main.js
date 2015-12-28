@@ -3,16 +3,13 @@ import { render } from 'react-dom'
 import { Router, Route, Link } from 'react-router'
 
 import App from 'app'
-import RStar from 'components/rstar'
-import Fp from 'components/fp'
-import Default from 'components/default'
+import EQTerm from 'components/eq-term'
 
 render((
   <Router>
     <Route path='/' component={App}>
-      <Route path='rstar' component={RStar} />
-      <Route path='fp' component={Fp}  />
-      <Route path='*' component={Default} />
+      <Route path='rstar' component={EQTerm} />
+      <Route path='fp' component={EQTerm}  />
     </Route>
   </Router>
 ), document.getElementById('root'))
