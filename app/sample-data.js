@@ -9,7 +9,7 @@ export default {
     'name': 'fp',
     'displayName': 'f<sub>p</sub>',
     'valueType': 'percentage',
-    'description': 'The fraction of those stars that have planets',
+    'description': 'The fraction of stars that have planets',
     'backgroundImage': ''
   }
 }
