@@ -1,11 +1,11 @@
-html, body, #root, .app{ height: 100%; }
 
 h1{ font-style: italic }
 
-.card{
+.eq-term{
   border-radius: 20px;
   padding: 1em;
   height: 60%;
   background-size: cover;
-  color: white
+  color: white;
+  min-height: 400px;
 }
