@@ -9,6 +9,10 @@ let EQTerm = React.createClass({
 		this.props.updateParent(newValue)
 	},
 
+	componentWillReceiveProps(){
+		this.refs.userValue.value = ''
+	},
+
 	render(){
 		return (
 			<div>
