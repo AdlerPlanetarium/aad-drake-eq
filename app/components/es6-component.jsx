@@ -7,6 +7,6 @@ export default class ES6Component extends React.Component{
 	}
 
 	render(){
-		return <li>This is a React component defined using {this.state.tool}. <em class="nice">{this.props.nice}</em></li>;
+		return <li>This is a React component defined using {this.state.tool}. <em className="nice">{this.props.nice}</em></li>;
 	}
 }
