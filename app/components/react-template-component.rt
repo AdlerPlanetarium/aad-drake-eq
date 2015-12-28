@@ -1,3 +1,0 @@
-<li class="foo">
-	This is a component defined using {this.state.tool}! <em class="nice">{this.props.nice}</em>
-</li>
