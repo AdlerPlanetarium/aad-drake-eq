@@ -15,7 +15,7 @@ let EQTerm = React.createClass({
 
 	render(){
 		return (
-			<div>
+			<div style={{backgroundImage: 'url('+this.props.cardData.backgroundImage+')'}} className='card'>
 				<h1 dangerouslySetInnerHTML={{__html: this.props.cardData.displayName}}></h1>
 				<p>{this.props.cardData.description}</p>
 				<input type="number" ref="userValue" required="required"></input><span style={{display: this.props.cardData.valueType=='percentage' ? 'inline' : 'none'}}>%</span>
