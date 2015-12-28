@@ -3,7 +3,7 @@ import React from 'react';
 let RStar = React.createClass({
 
 	doUpdate(){
-		this.props.updateParent(5)
+		this.props.updateParent(parseFloat(this.refs.userValue.value))
 	},
 
 	render(){
@@ -11,8 +11,8 @@ let RStar = React.createClass({
 			<div>
 				<h1 dangerouslySetInnerHTML={{__html: this.props.cardData.displayName}}></h1>
 				<p>{this.props.cardData.description}</p>
-				<p>{JSON.stringify(this.props.cardData)}</p>
-				<button onClick={this.doUpdate}>blah</button>
+				<input type="number" ref="userValue" required="required"></input>&nbsp;
+				<button onClick={this.doUpdate}>Estimate</button>
 			</div>
 		)
 	}
