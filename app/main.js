@@ -13,6 +13,11 @@ render((
     <Route path='/' component={App}>
       <Route path='rstar' component={EQTerm} />
       <Route path='fp' component={EQTerm}  />
+      <Route path='ne' component={EQTerm}  />
+      <Route path='fl' component={EQTerm}  />
+      <Route path='fi' component={EQTerm}  />
+      <Route path='fc' component={EQTerm}  />
+      <Route path='L' component={EQTerm}  />
     </Route>
   </Router>
 ), document.getElementById('root'))
