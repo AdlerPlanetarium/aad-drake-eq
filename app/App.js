@@ -3,7 +3,7 @@ import Data from 'sample-data'
 
 let App = React.createClass({
   getInitialState(){
-    return { 'rstar': null , 'fp': null , 'ne': null , 'fe': null , 'fi': null , 'fc': null , 'L': null  }
+    return { 'rstar': null , 'fp': null , 'ne': null , 'fl': null , 'fi': null , 'fc': null , 'L': null  }
   },
 
   setUserValue(name,value){
@@ -37,18 +37,22 @@ let App = React.createClass({
     return (
       <div className='app'>
         <nav>
-          <ul>
+          <ul className='row'>
             {Object.keys(Data).map(function(key){
-              return <li key={key}><a href={this.getRoute(key)}>{key}</a></li>
+              return <li className='one column' key={key}><a href={this.getRoute(key)}>{key}</a></li>
             },this)}
           </ul>
           <ul>
             {Object.keys(this.state).map(function(key){
-              return <li key={key}><a href={this.getRoute(key)}>{this.state[key]}</a></li>
+              return <li className='one column' key={key}><a href={this.getRoute(key)}>{this.state[key]}</a></li>
             },this)}
           </ul>
+          <ul>
+            <li className='three columns'></li>
+            <li className='one column'>{ this.computeDrake() }</li>
+            <li className='three columns'></li>
+          </ul>
         </nav>
-        <p><span>{ this.computeDrake() }</span></p>
         {this.props.children && React.cloneElement(this.props.children, {
           updateParent: this.setUserValue.bind(this,this.getPath()),
           cardData: this.getData()
