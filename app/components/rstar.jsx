@@ -1,11 +1,18 @@
 import React from 'react';
 
-export default class RStar extends React.Component{
-	constructor(props){
-		super(props)
-	}
+let RStar = React.createClass({
+
+	doUpdate(){
+		this.props.updateParent(5)
+	},
 
 	render(){
-		return <span>rstar</span>
+		return (
+			<div>
+				<button onClick={this.doUpdate}>blah</button>
+			</div>
+		)
 	}
-}
+})
+
+export default RStar

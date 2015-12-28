@@ -6,6 +6,6 @@ export default class Fp extends React.Component{
 	}
 
 	render(){
-		return <span>fp</span>
+		return <p>{JSON.stringify(this.props.route.cardData)}</p>
 	}
 }
