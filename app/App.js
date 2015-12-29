@@ -36,21 +36,13 @@ let App = React.createClass({
   render() {
     return (
       <div className='app'>
+        <h1>Exploring the Drake Equation</h1>
         <nav>
           <ul className='row'>
+            <li className='four columns'>N=</li>
             {Object.keys(Data).map(function(key){
-              return <li className='one column' key={key}><a href={this.getRoute(key)}>{key}</a></li>
+              return <li className='one column' key={key}><a href={this.getRoute(key)} className='button'><span dangerouslySetInnerHTML={{__html: Data[key].displayName}}></span></a></li>
             },this)}
-          </ul>
-          <ul>
-            {Object.keys(this.state).map(function(key){
-              return <li className='one column' key={key}><a href={this.getRoute(key)}>{this.state[key]}</a></li>
-            },this)}
-          </ul>
-          <ul>
-            <li className='three columns'></li>
-            <li className='one column'>{ this.computeDrake() }</li>
-            <li className='three columns'></li>
           </ul>
         </nav>
         {this.props.children && React.cloneElement(this.props.children, {

@@ -38,13 +38,13 @@ export default {
     'displayName': 'f<sub>c</sub>',
     'valueType': 'percentage',
     'description': 'The fraction of civilizations that develop a technology that releases detectable signs of their existence into space',
-    'backgroundImage': 'images/154971_sid_meier_s_civilization_iii_play_the_wor.jpg'
+    'backgroundImage': 'images/searching_for_alien_life_by_dragfindel.jpg'
   } ,
   'L': {
     'name': 'L',
     'displayName': 'L',
     'valueType': 'quantity',
     'description': 'The length of time for which such civilizations release detectable signals into space',
-    'backgroundImage': 'images/searching_for_alien_life_by_dragfindel.jpg'
+    'backgroundImage': 'images/maxresdefault.jpg'
   } ,
 }

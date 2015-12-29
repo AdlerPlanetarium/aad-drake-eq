@@ -15,11 +15,13 @@ let EQTerm = React.createClass({
 
 	render(){
 		return (
-			<div style={{backgroundImage: 'url('+this.props.cardData.backgroundImage+')'}} className='eq-term'>
-				<h1 dangerouslySetInnerHTML={{__html: this.props.cardData.displayName}}></h1>
-				<p>{this.props.cardData.description}</p>
-				<input type="number" ref="userValue" required="required"></input><span style={{display: this.props.cardData.valueType=='percentage' ? 'inline' : 'none'}}>%</span>
-				<button onClick={this.doUpdate}>Estimate</button>
+			<div className="row">
+				<div style={{backgroundImage: 'url('+this.props.cardData.backgroundImage+')'}} className='eq-term twelve columns'>
+					<h1 dangerouslySetInnerHTML={{__html: this.props.cardData.displayName}}></h1>
+					<p>{this.props.cardData.description}</p>
+					<div className='three columns'><input type="number" ref="userValue" required="required"></input><span className='pctLabel' style={{display: this.props.cardData.valueType=='percentage' ? 'inline' : 'none'}}>%</span></div>
+					<button onClick={this.doUpdate} className="button-primary">Estimate</button>
+				</div>
 			</div>
 		)
 	}

@@ -11,7 +11,7 @@ li a {
     text-decoration: none;
 }
 
-h1 {font-style: italic;}
+h1 {font-style: italic; }
 
 .eq-term {
   border-radius: 20px;
@@ -19,8 +19,26 @@ h1 {font-style: italic;}
   height: 60%;
   background-size: cover;
   color: white;
-  min-height: 400px;
+  min-height: 600px;
 }
 .eq-term input {
+  color: black;
+}
+
+button.button-primary, a.button.button-primary{
+  background-color: hsla(0,0%,100%,0.6);
+  color: black;
+  border: 0;
+}
+
+button.button-primary:hover, a.button.button-primary:hover{
+  background-color: white;
+  color: #444;
+  position: relative;
+}
+
+.pctLabel{
+  position: relative;
+  left: -2.5em;
   color: black;
 }
