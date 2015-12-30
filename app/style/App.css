@@ -19,19 +19,31 @@ h1 {font-style: italic; }
   height: 60%;
   background-size: cover;
   color: white;
-  min-height: 600px;
+  min-height: 400px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
 }
 .eq-term input {
   color: black;
 }
 
-button.button-primary, a.button.button-primary{
+button.button-primary:focus,
+a.button.button-primary:focus,
+button.button-primary,
+a.button.button-primary{
   background-color: hsla(0,0%,100%,0.6);
   color: black;
   border: 0;
 }
 
-button.button-primary:hover, a.button.button-primary:hover{
+button.button-primary:visited,
+a.button.button-primary:visited,
+button.button-primary:hover,
+a.button.button-primary:hover,
+button.button-primary:active,
+a.button.button-primary:active{
   background-color: white;
   color: #444;
   position: relative;
@@ -41,4 +53,22 @@ button.button-primary:hover, a.button.button-primary:hover{
   position: relative;
   left: -2.5em;
   color: black;
+}
+
+.card-enter {
+  opacity: 0.01;
+}
+
+.card-enter.card-enter-active {
+  opacity: 1;
+  transition: opacity 300ms ease-in;
+}
+
+.card-leave {
+  opacity: 1;
+}
+
+.card-leave.card-leave-active {
+  opacity: 0.01;
+  transition: opacity 300ms ease-in;
 }

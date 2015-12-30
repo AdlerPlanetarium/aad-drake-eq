@@ -3,14 +3,18 @@ export default {
     'displayName': 'R<sub>*</sub>',
     'valueType': 'quantity',
     'description': 'The average rate of star formation in our galaxy',
-    'backgroundImage': 'images/Hs-2009-25-e-full_jpg.jpg'
+    'backgroundImage': 'images/Hs-2009-25-e-full_jpg.jpg',
+    'estimatedMin': 1,
+    'estimatedMax': 20
   } ,
   'fp': {
     'name': 'fp',
     'displayName': 'f<sub>p</sub>',
     'valueType': 'percentage',
     'description': 'The fraction of stars that have planets',
-    'backgroundImage': 'images/5_139.jpg'
+    'backgroundImage': 'images/5_139.jpg',
+    'estimatedMin': 0.4,
+    'estimatedMax': 1
   } ,
   'ne': {
     'name': 'ne',
@@ -38,7 +42,9 @@ export default {
     'displayName': 'f<sub>c</sub>',
     'valueType': 'percentage',
     'description': 'The fraction of civilizations that develop a technology that releases detectable signs of their existence into space',
-    'backgroundImage': 'images/searching_for_alien_life_by_dragfindel.jpg'
+    'backgroundImage': 'images/searching_for_alien_life_by_dragfindel.jpg',
+    'estimatedMin': 0.05,
+    'estimatedMax': 0.50
   } ,
   'L': {
     'name': 'L',

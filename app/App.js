@@ -45,10 +45,14 @@ let App = React.createClass({
             },this)}
           </ul>
         </nav>
-        {this.props.children && React.cloneElement(this.props.children, {
-          updateParent: this.setUserValue.bind(this,this.getPath()),
-          cardData: this.getData()
-        })}
+        <div className="row">
+          <div className="twelve columns" style={{position: 'relative'}}>
+            {this.props.children && React.cloneElement(this.props.children, {
+              updateParent: this.setUserValue.bind(this,this.getPath()),
+              cardData: this.getData()
+            })}
+          </div>
+        </div>
       </div>
     );
   }
