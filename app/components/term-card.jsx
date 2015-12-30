@@ -36,6 +36,15 @@ let TermCard = React.createClass({
 		return this.getRoute(keys[index-1]);
 	},
 
+	getNextRoute(){
+		var keys = Object.keys(Data);
+		var index = keys.indexOf(this.props.cardData.name);
+		if(index > 5)
+			return null;
+
+		return this.getRoute(keys[index+1]);
+	},
+
 	render(){
 		return (
 			<ReactCSSTransitionGroup transitionName="card" transitionEnterTimeout={300} transitionLeaveTimeout={300}>
@@ -46,7 +55,7 @@ let TermCard = React.createClass({
 					<div className='three columns'><input type="number" ref="userValue" required="required"></input><span className='pctLabel' style={{display: this.props.cardData.valueType=='percentage' ? 'inline' : 'none'}}>%</span></div>
 					<button onClick={this.doUpdate} className="button-primary">Estimate</button>
 					<a className='button button-primary prev-button' href={this.getPreviousRoute()}>&laquo; Previous</a>
-					<a className='button button-primary next-button'>Next &raquo;</a>
+					<a className='button button-primary next-button' href={this.getNextRoute()}>Next &raquo;</a>
 				</div>
 			</ReactCSSTransitionGroup>
 		)
