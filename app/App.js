@@ -1,5 +1,6 @@
 import React from 'react'
 import Data from 'sample-data'
+import EQTerm from 'components/eq-term'
 
 let App = React.createClass({
   getInitialState(){
@@ -41,7 +42,7 @@ let App = React.createClass({
           <ul className='row'>
             <li className='four columns'>N=</li>
             {Object.keys(Data).map(function(key){
-              return <li className='one column' key={key}><a href={this.getRoute(key)} className='button'><span dangerouslySetInnerHTML={{__html: Data[key].displayName}}></span></a></li>
+              return <EQTerm key={key} name={key} value={this.state[key]} />
             },this)}
           </ul>
         </nav>
