@@ -72,3 +72,18 @@ a.button.button-primary:active{
   opacity: 0.01;
   transition: opacity 300ms ease-in;
 }
+/*
+nav .column{ position: relative; }
+
+nav .column::after{
+  content: 'x';
+  position: absolute;
+  top: 0;
+  right: -2.5em;
+}
+*/
+
+nav .column{
+  margin-left: 0 !important;
+  width: 8.666667% !important;
+}

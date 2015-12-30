@@ -25,6 +25,14 @@ let App = React.createClass({
     return '#/' + key
   },
 
+  resetState(){
+    var newState = {}
+    Object.keys(Data).forEach(function(key){
+      newState[key] = 0
+    })
+    this.setState(newState)
+  },
+
   computeDrake(){
     return Object.keys(this.state).map(
       function(key){ return this.state[key]},
@@ -38,9 +46,13 @@ let App = React.createClass({
     return (
       <div className='app'>
         <h1>Exploring the Drake Equation</h1>
+        <button onClick={this.resetState}>reset</button>
         <nav>
           <ul className='row'>
-            <li className='four columns'>N=</li>
+            <li className='five columns'>
+              <p>N=</p>
+              <p>{this.computeDrake()}</p>
+            </li>
             {Object.keys(Data).map(function(key){
               return <EQTerm key={key} name={key} value={this.state[key]} />
             },this)}
