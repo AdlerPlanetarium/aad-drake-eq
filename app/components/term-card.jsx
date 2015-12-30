@@ -2,7 +2,7 @@ import React from 'react'
 import ReactCSSTransitionGroup from 'react-addons-css-transition-group'
 
 
-let EQTerm = React.createClass({
+let TermCard = React.createClass({
 
 	doUpdate(){
 		var newValue = parseFloat(this.refs.userValue.value)
@@ -37,4 +37,4 @@ let EQTerm = React.createClass({
 	}
 })
 
-export default EQTerm
+export default TermCard
