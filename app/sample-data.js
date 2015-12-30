@@ -1,5 +1,6 @@
 export default {
   'rstar': {
+    'name': 'rstar',
     'displayName': 'R<sub>*</sub>',
     'valueType': 'quantity',
     'description': 'The average rate of star formation in our galaxy',

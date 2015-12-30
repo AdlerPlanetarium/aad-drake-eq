@@ -46,7 +46,6 @@ button.button-primary:active,
 a.button.button-primary:active{
   background-color: white;
   color: #444;
-  position: relative;
 }
 
 .pctLabel{
@@ -86,4 +85,16 @@ nav .column::after{
 nav .column{
   margin-left: 0 !important;
   width: 8.666667% !important;
+}
+
+.prev-button{
+  position: absolute;
+  bottom: 1em;
+  left: 2em;
+}
+
+.next-button{
+  position: absolute;
+  bottom: 1em;
+  right: 2em;
 }
