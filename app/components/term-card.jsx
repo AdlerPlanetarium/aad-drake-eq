@@ -45,7 +45,6 @@ let TermCard = React.createClass({
 					<p style={{display: this.props.cardData.estimatedMax ? 'block' : 'none'}}>Estimates range from {this.formatNum(this.props.cardData.estimatedMin)} to {this.formatNum(this.props.cardData.estimatedMax)} </p>
 					<div className='three columns'><input type="number" ref="userValue" required="required"></input><span className='pctLabel' style={{display: this.props.cardData.valueType=='percentage' ? 'inline' : 'none'}}>%</span></div>
 					<button onClick={this.doUpdate} className="button-primary">Estimate</button>
-					<p>{Object.keys(Data).indexOf(this.props.cardData.name)}</p>
 					<a className='button button-primary prev-button' href={this.getPreviousRoute()}>&laquo; Previous</a>
 					<a className='button button-primary next-button'>Next &raquo;</a>
 				</div>
