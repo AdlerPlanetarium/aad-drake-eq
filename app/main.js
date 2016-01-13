@@ -5,6 +5,8 @@ import { Router, Route, Link } from 'react-router'
 import App from 'app'
 import TermCard from 'components/term-card'
 
+require('expose?$!expose?jQuery!jquery')
+require('bootstrap-webpack')
 require('style/app.css')
 
 render((

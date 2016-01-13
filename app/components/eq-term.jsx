@@ -19,8 +19,8 @@ let EQTerm = React.createClass({
 
 	render(){
 		return (
-			<li className='one column'>
-				<a href={this.getRoute(this.props.name)} className='button'>
+			<li>
+				<a href={this.getRoute(this.props.name)}>
 					<p dangerouslySetInnerHTML={{__html: Data[this.props.name].displayName}}></p>
 				</a>
 				<p dangerouslySetInnerHTML={{__html: this.formatNum(this.props.value)}}></p>

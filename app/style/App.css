@@ -1,4 +1,4 @@
-ul {
+/*ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
@@ -9,7 +9,7 @@ li a {
     display: block;
     text-align: center;
     text-decoration: none;
-}
+}*/
 
 h1 {font-style: italic; }
 
@@ -82,10 +82,10 @@ nav .column::after{
 }
 */
 
-nav .column{
+/*nav .row{
   margin-left: 0 !important;
   width: 8.666667% !important;
-}
+}*/
 
 .prev-button{
   position: absolute;

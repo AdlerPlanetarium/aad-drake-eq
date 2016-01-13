@@ -52,10 +52,10 @@ let TermCard = React.createClass({
 					<h1 dangerouslySetInnerHTML={{__html: this.props.cardData.displayName}}></h1>
 					<p>{this.props.cardData.description}</p>
 					<p style={{display: this.props.cardData.estimatedMax ? 'block' : 'none'}}>Estimates range from {this.formatNum(this.props.cardData.estimatedMin)} to {this.formatNum(this.props.cardData.estimatedMax)} </p>
-					<div className='three columns'><input type="number" ref="userValue" required="required"></input><span className='pctLabel' style={{display: this.props.cardData.valueType=='percentage' ? 'inline' : 'none'}}>%</span></div>
-					<button onClick={this.doUpdate} className="button-primary">Estimate</button>
-					<a className='button button-primary prev-button' href={this.getPreviousRoute()}>&laquo; Previous</a>
-					<a className='button button-primary next-button' href={this.getNextRoute()}>Next &raquo;</a>
+					<div><input type="number" ref="userValue" required="required"></input><span className='pctLabel' style={{display: this.props.cardData.valueType=='percentage' ? 'inline' : 'none'}}>%</span></div>
+					<button onClick={this.doUpdate}>Estimate</button>
+					<a href={this.getPreviousRoute()}>&laquo; Previous</a>
+					<a href={this.getNextRoute()}>Next &raquo;</a>
 				</div>
 			</ReactCSSTransitionGroup>
 		)

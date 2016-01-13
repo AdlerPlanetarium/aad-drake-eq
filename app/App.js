@@ -48,8 +48,8 @@ let App = React.createClass({
         <h1>Exploring the Drake Equation</h1>
         <button onClick={this.resetState}>reset</button>
         <nav>
-          <ul className='row'>
-            <li className='five columns'>
+          <ul>
+            <li>
               <p>N=</p>
               <p>{this.computeDrake()}</p>
             </li>
@@ -58,8 +58,8 @@ let App = React.createClass({
             },this)}
           </ul>
         </nav>
-        <div className="row">
-          <div className="twelve columns" style={{position: 'relative'}}>
+        <div>
+          <div style={{position: 'relative'}}>
             {this.props.children && React.cloneElement(this.props.children, {
               updateParent: this.setUserValue.bind(this,this.getPath()),
               cardData: this.getData()
