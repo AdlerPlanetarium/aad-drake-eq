@@ -4,8 +4,7 @@ import { Router, Route, Link } from 'react-router'
 
 import App from 'app'
 import TermCard from 'components/term-card'
-require('skeleton-css/css/normalize.css')
-require('skeleton-css/css/skeleton.css')
+
 require('style/app.css')
 
 render((
