@@ -7,7 +7,7 @@ import TermCard from 'components/term-card'
 
 require('expose?$!expose?jQuery!jquery')
 require('bootstrap-webpack')
-require('style/app.css')
+// require('style/app.css')
 require('style/AADcustom.css')
 
 render((
