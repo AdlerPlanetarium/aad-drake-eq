@@ -45,7 +45,21 @@ let App = React.createClass({
   render() {
     return (
       <div className='app'>
-        <h1>Exploring the Drake Equation</h1>
+        <header className="intro">
+            <div className="intro-body">
+                <div className="container">
+                    <div className="row">
+                        <div className="col-md-8 col-md-offset-2">
+                            <h3 className="intro-text">EXPLORING</h3>
+                            <h2 className="brand-heading">The Drake Equation</h2>
+                            <a href="#cards" className="btn btn-circle page-scroll">
+                                <i className="fa fa-angle-double-down animated"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
         <button onClick={this.resetState}>reset</button>
         <nav>
           <ul>
