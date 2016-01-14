@@ -22,21 +22,27 @@ export default {
     'displayName': 'n<sub>e</sub>',
     'valueType': 'quantity',
     'description': 'The average number of planets that can potentially support life per star that has planets',
-    'backgroundImage': 'images/AAD_icons-03.svg'
+    'backgroundImage': 'images/AAD_icons-03.svg',
+    'estimatedMin': 0,
+    'estimatedMax': 3
   } ,
   'fl': {
     'name': 'fl',
     'displayName': 'f<sub>l</sub>',
     'valueType': 'percentage',
     'description': 'The fraction of planets that could support life that actually develop life at some point',
-    'backgroundImage': 'images/AAD_icons-04.svg'
+    'backgroundImage': 'images/AAD_icons-04.svg',
+    'estimatedMin': 0,
+    'estimatedMax': 1
   } ,
   'fi': {
     'name': 'fi',
     'displayName': 'f<sub>i</sub>',
     'valueType': 'percentage',
     'description': 'The fraction of planets with life that actually go on to develop intelligent life (civilizations)',
-    'backgroundImage': 'images/AAD_icons-05.svg'
+    'backgroundImage': 'images/AAD_icons-05.svg',
+    'estimatedMin': 0.00,
+    'estimatedMax': 1.00
   } ,
   'fc': {
     'name': 'fc',
@@ -52,6 +58,8 @@ export default {
     'displayName': 'L',
     'valueType': 'quantity',
     'description': 'The length of time for which such civilizations release detectable signals into space',
-    'backgroundImage': 'images/AAD_icons-07.svg'
+    'backgroundImage': 'images/AAD_icons-07.svg',
+    'estimatedMin': 100,
+    'estimatedMax': 1000000
   } ,
 }

@@ -5,15 +5,25 @@ import Data from 'sample-data'
 
 let TermCard = React.createClass({
 
+	getInitialState(){
+  	return { 'rstar': null , 'fp': null , 'ne': null , 'fl': null , 'fi': null , 'fc': null , 'L': null  }
+  },
+
+  setUserValue(name,value){
+    var update = { }
+    update[name] = value
+    this.setState(update)
+  },
+
 	doUpdate(){
 		var newValue = parseFloat(this.refs.userValue.value)
-		if(this.props.cardData.valueType=='percentage') newValue /= 100
+		if(this.props.cardData.valueType=='percentage') parseFloat(newValue /= 100)
 
 		this.props.updateParent(newValue)
 	},
 
 	componentWillReceiveProps(){
-		this.refs.userValue.value = ''
+		this.setUserValue(this.props.cardData.name)
 	},
 
 	formatNum(num){
@@ -52,8 +62,19 @@ let TermCard = React.createClass({
 					<h1 dangerouslySetInnerHTML={{__html: this.props.cardData.displayName}}></h1>
 					<p>{this.props.cardData.description}</p>
 					<p style={{display: this.props.cardData.estimatedMax ? 'block' : 'none'}}>Estimates range from {this.formatNum(this.props.cardData.estimatedMin)} to {this.formatNum(this.props.cardData.estimatedMax)} </p>
-					<div><input type="number" ref="userValue" required="required"></input><span className='pctLabel' style={{display: this.props.cardData.valueType=='percentage' ? 'inline' : 'none'}}>%</span></div>
+					<div>
+						<input
+							type="range"
+							ref="userValue"
+							required="required"
+							defaultValue={this.state[this.props.cardData.name]}
+							min={(this.props.cardData.valueType == 'percentage') ? (this.props.cardData.estimatedMin * 100) : this.props.cardData.estimatedMin}
+							max={(this.props.cardData.valueType == 'percentage') ? (this.props.cardData.estimatedMax * 100) : this.props.cardData.estimatedMax}
+							onInput={this.doUpdate}>
+						</input><span className='pctLabel' style={{display: this.props.cardData.valueType=='percentage' ? 'inline' : 'none'}}>%</span></div>
 					<button onClick={this.doUpdate}>Estimate</button>
+					<br/>
+					<span>{this.formatNum(this.state[this.props.cardData.name])}</span>
 					<a className='btn btn-default prev-button' href={this.getPreviousRoute()}>&laquo; Previous</a>
 					<a className='btn btn-default next-button' href={this.getNextRoute()}>Next &raquo;</a>
 				</div>
