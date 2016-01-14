@@ -45,26 +45,35 @@ let App = React.createClass({
   render(){
     return (
       <div className='app'>
-        <button onClick={this.resetState}>reset</button>
-        <nav>
-          <ul>
-            <li>
-              <p>N=</p>
-              <p>{this.computeDrake()}</p>
-            </li>
-            {Object.keys(Data).map(function(key){
-              return <EQTerm key={key} name={key} value={this.state[key]} />
-            },this)}
-          </ul>
-        </nav>
-        <div>
-          <div style={{position: 'relative'}}>
-            {this.props.children && React.cloneElement(this.props.children, {
-              updateParent: this.setUserValue.bind(this,this.getPath()),
-              cardData: this.getData()
-            })}
+        <section id="cards" >
+            <div className="row">
+                <div className="col-lg-8 col-lg-offset-2">
+                  <br/>
+                  <button className='btn btn-default' onClick={this.resetState}>reset</button>
+                  <br/>
+                  <nav>
+                    <ul className='nav nav-pills nav-justified'>
+                      <li>
+                        <p>N=</p>
+                        <p>{this.computeDrake()}</p>
+                      </li>
+                      {Object.keys(Data).map(function(key){
+                        return <EQTerm key={key} name={key} value={this.state[key]} />
+                      },this)}
+                    </ul>
+                  </nav>
+                  <div>
+                    <div style={{position: 'relative'}}>
+                      {this.props.children && React.cloneElement(this.props.children, {
+                        updateParent: this.setUserValue.bind(this,this.getPath()),
+                        cardData: this.getData()
+                      })}
+                    </div>
+                  </div>
+
+            </div>
           </div>
-        </div>
+        </section>
       </div>
     );
   }

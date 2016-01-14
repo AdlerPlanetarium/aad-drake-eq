@@ -11,7 +11,7 @@ li a {
     text-decoration: none;
 }*/
 
-h1 {font-style: italic; }
+/*h1 {font-style: italic; }*/
 
 .eq-term {
   border-radius: 20px;
@@ -24,21 +24,22 @@ h1 {font-style: italic; }
   top: 0;
   left: 0;
   width: 100%;
+  background-color: #662d91;
 }
 .eq-term input {
   color: black;
 }
 
-button.button-primary:focus,
+/*button.button-primary:focus,
 a.button.button-primary:focus,
 button.button-primary,
 a.button.button-primary{
   background-color: hsla(0,0%,100%,0.6);
   color: black;
   border: 0;
-}
+}*/
 
-button.button-primary:visited,
+/*button.button-primary:visited,
 a.button.button-primary:visited,
 button.button-primary:hover,
 a.button.button-primary:hover,
@@ -46,7 +47,7 @@ button.button-primary:active,
 a.button.button-primary:active{
   background-color: white;
   color: #444;
-}
+}*/
 
 .pctLabel{
   position: relative;
