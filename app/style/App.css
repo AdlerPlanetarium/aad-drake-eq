@@ -17,7 +17,9 @@ li a {
   border-radius: 20px;
   padding: 1em;
   height: 60%;
-  background-size: cover;
+  background-size: 50%;
+  background-repeat: no-repeat;
+  background-position: bottom right;
   color: white;
   min-height: 400px;
   position: absolute;
@@ -91,11 +93,31 @@ nav .column::after{
 .prev-button{
   position: absolute;
   bottom: 1em;
-  left: 2em;
 }
 
 .next-button{
   position: absolute;
   bottom: 1em;
-  right: 2em;
+  right: 1em;
+}
+
+.btn-default{
+  background-color: hsla(0, 0%, 100%, 0.3) !important;
+  color: white;
+  border: 0 !important;
+}
+
+.btn-default:hover{
+  background-color: hsla(0,0%, 100%, 0.6) !important;
+  color: white;
+}
+
+p {
+  font-size: 1.3rem !important;
+}
+
+#root{ height: 100%; }
+
+nav p {
+  font-size: 2em !important;
 }

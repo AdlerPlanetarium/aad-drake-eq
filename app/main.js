@@ -5,6 +5,7 @@ import { Router, Route, Link } from 'react-router'
 import App from 'app'
 import TermCard from 'components/term-card'
 
+// <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
 require('expose?$!expose?jQuery!jquery')
 require('bootstrap-webpack')
 require('style/app.css')

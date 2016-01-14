@@ -27,8 +27,10 @@ let TermCard = React.createClass({
 	},
 
 	formatNum(num){
+		if(!num && num!==0) return '';
+
 		if(this.props.cardData.valueType == 'percentage')
-			return (100*num)+'%'
+			return Math.round(100*num)+'%'
 
 		return num
 	},
@@ -71,10 +73,8 @@ let TermCard = React.createClass({
 							min={(this.props.cardData.valueType == 'percentage') ? (this.props.cardData.estimatedMin * 100) : this.props.cardData.estimatedMin}
 							max={(this.props.cardData.valueType == 'percentage') ? (this.props.cardData.estimatedMax * 100) : this.props.cardData.estimatedMax}
 							onInput={this.doUpdate}>
-						</input><span className='pctLabel' style={{display: this.props.cardData.valueType=='percentage' ? 'inline' : 'none'}}>%</span></div>
-					<button onClick={this.doUpdate}>Estimate</button>
-					<br/>
-					<span>{this.formatNum(this.state[this.props.cardData.name])}</span>
+						</input>
+					</div>
 					<a className='btn btn-default prev-button' href={this.getPreviousRoute()}>&laquo; Previous</a>
 					<a className='btn btn-default next-button' href={this.getNextRoute()}>Next &raquo;</a>
 				</div>

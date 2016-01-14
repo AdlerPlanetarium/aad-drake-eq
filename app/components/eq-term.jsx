@@ -12,7 +12,7 @@ let EQTerm = React.createClass({
 			return '&nbsp;'
 
 		if(Data[this.props.name].valueType == 'percentage')
-			return (100*num)+'%'
+			return Math.round(100*num)+'%'
 
 		return num
 	},
@@ -22,8 +22,8 @@ let EQTerm = React.createClass({
 			<li>
 				<a href={this.getRoute(this.props.name)}>
 					<p dangerouslySetInnerHTML={{__html: Data[this.props.name].displayName}}></p>
+  				<p dangerouslySetInnerHTML={{__html: this.formatNum(this.props.value)}}></p>
 				</a>
-				<p dangerouslySetInnerHTML={{__html: this.formatNum(this.props.value)}}></p>
 			</li>
 		)
 	}
