@@ -3,9 +3,9 @@
     margin: 0;
     padding: 0;
     overflow: hidden;
-}
+}*/
 
-li a {
+/*li a {
     display: block;
     text-align: center;
     text-decoration: none;
@@ -30,18 +30,19 @@ li a {
 }
 .eq-term input {
   color: black;
+  width: 50%;
 }
 
-button.button-primary:focus,
+/*button.button-primary:focus,
 a.button.button-primary:focus,
 button.button-primary,
 a.button.button-primary{
   background-color: hsla(0,0%,100%,0.6);
   color: black;
   border: 0;
-}
+}*/
 
-button.button-primary:visited,
+/*button.button-primary:visited,
 a.button.button-primary:visited,
 button.button-primary:hover,
 a.button.button-primary:hover,
@@ -49,13 +50,13 @@ button.button-primary:active,
 a.button.button-primary:active{
   background-color: white;
   color: #444;
-}
+}*/
 
-.pctLabel{
+/*.pctLabel{
   position: relative;
   left: -2.5em;
   color: black;
-}
+}*/
 
 .card-enter {
   opacity: 0.01;
@@ -74,21 +75,32 @@ a.button.button-primary:active{
   opacity: 0.01;
   transition: opacity 300ms ease-in;
 }
-/*
-nav .column{ position: relative; }
 
-nav .column::after{
+/*nav .column{ position: relative; }*/
+
+/*nav .column::after{
   content: 'x';
   position: absolute;
   top: 0;
   right: -2.5em;
-}
-*/
+}*/
+
 
 /*nav .row{
   margin-left: 0 !important;
   width: 8.666667% !important;
 }*/
+
+.btn{
+  border-radius: 8px;
+}
+
+.btn-primary{
+  color: #E82148;
+  border: 2px solid #E82148;
+  background-color: #fff;
+  padding: 1em inherit;
+}
 
 .prev-button{
   position: absolute;
@@ -120,4 +132,16 @@ p {
 
 nav p {
   font-size: 2em !important;
+  font-style: italic;
+}
+
+.result {
+  color: #E82148;
+  vertical-align: middle;
+}
+
+.value {
+  background-color: #662D91;
+  min-width: 50px;
+
 }

@@ -49,13 +49,13 @@ let App = React.createClass({
             <div className="row">
                 <div className="col-lg-8 col-lg-offset-2">
                   <br/>
-                  <button className='btn btn-default' onClick={this.resetState}>Reset</button>
+                  <button className='btn btn-primary' onClick={this.resetState}>Reset</button>
                   <br/>
                   <nav>
                     <ul className='nav nav-pills nav-justified'>
                       <li>
-                        <p>N=</p>
-                        <p>{this.computeDrake()}</p>
+                        <p className='result'>N=</p>
+                        <p className='result'>{this.computeDrake()}</p>
                       </li>
                       {Object.keys(Data).map(function(key){
                         return <EQTerm key={key} name={key} value={this.state[key]} />
