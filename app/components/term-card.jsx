@@ -1,29 +1,14 @@
 import React from 'react'
 import ReactCSSTransitionGroup from 'react-addons-css-transition-group'
-import Data from 'sample-data'
-
+import Data from '../sample-data'
 
 let TermCard = React.createClass({
-
-	getInitialState(){
-  	return { 'rstar': null , 'fp': null , 'ne': null , 'fl': null , 'fi': null , 'fc': null , 'L': null  }
-  },
-
-  setUserValue(name,value){
-    var update = { }
-    update[name] = value
-    this.setState(update)
-  },
 
 	doUpdate(){
 		var newValue = parseFloat(this.refs.userValue.value)
 		if(this.props.cardData.valueType=='percentage') parseFloat(newValue /= 100)
 
 		this.props.updateParent(newValue)
-	},
-
-	componentWillReceiveProps(){
-		this.setUserValue(this.props.cardData.name)
 	},
 
 	formatNum(num){
@@ -59,19 +44,19 @@ let TermCard = React.createClass({
 
 	render(){
 		return (
-			<ReactCSSTransitionGroup transitionName="card" transitionEnterTimeout={300} transitionLeaveTimeout={300}>
+			<ReactCSSTransitionGroup transitionName='card' transitionEnterTimeout={300} transitionLeaveTimeout={300}>
 				<div key={this.props.cardData.name} style={{backgroundImage: 'url('+this.props.cardData.backgroundImage+')'}} className='eq-term'>
 					<h1 dangerouslySetInnerHTML={{__html: this.props.cardData.displayName}}></h1>
 					<p>{this.props.cardData.description}</p>
 					<p style={{display: this.props.cardData.estimatedMax ? 'block' : 'none'}}>Estimates range from {this.formatNum(this.props.cardData.estimatedMin)} to {this.formatNum(this.props.cardData.estimatedMax)} </p>
 					<div>
 						<input
-							type="range"
-							ref="userValue"
-							required="required"
-							defaultValue={this.state[this.props.cardData.name]}
-							min={(this.props.cardData.valueType == 'percentage') ? (this.props.cardData.estimatedMin * 100) : this.props.cardData.estimatedMin}
-							max={(this.props.cardData.valueType == 'percentage') ? (this.props.cardData.estimatedMax * 100) : this.props.cardData.estimatedMax}
+							type='range'
+							ref='userValue'
+							required='required'
+							defaultValue={(this.props.cardData.valueType === 'percentage') ? (this.props.state[this.props.cardData.name] * 100) : this.props.state[this.props.cardData.name]}
+							min={(this.props.cardData.valueType === 'percentage') ? (this.props.cardData.estimatedMin * 100) : this.props.cardData.estimatedMin}
+							max={(this.props.cardData.valueType === 'percentage') ? (this.props.cardData.estimatedMax * 100) : this.props.cardData.estimatedMax}
 							onInput={this.doUpdate}>
 						</input>
 					</div>

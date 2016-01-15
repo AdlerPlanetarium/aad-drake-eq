@@ -17,14 +17,22 @@ let EQTerm = React.createClass({
 		return num
 	},
 
+  checkActive(key){
+    if (key === this.props.path)
+      return 'btn btn-term-active'
+    else
+      return 'btn btn-term'
+  },
+
 	render(){
-		return (
-			<li>
-				<a href={this.getRoute(this.props.name)}>
-					<p className='btn value' dangerouslySetInnerHTML={{__html: Data[this.props.name].displayName}}></p>
-  				<p  className='btn value' dangerouslySetInnerHTML={{__html: this.formatNum(this.props.value)}}></p>
-				</a>
-			</li>
+    return (
+        <li>
+  				<a href={this.getRoute(this.props.name)}>
+  					<p className={this.checkActive(this.props.name)} dangerouslySetInnerHTML={{__html: Data[this.props.name].displayName}}></p>
+    				<p className='btn value' dangerouslySetInnerHTML={{__html: this.formatNum(this.props.value)}}></p>
+  				</a>
+          <span className='multiply' dangerouslySetInnerHTML={this.props.name !== 'L' ? {__html: 'x'} : null}></span>
+			  </li>
 		)
 	}
 })

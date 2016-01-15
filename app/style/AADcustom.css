@@ -6,7 +6,7 @@
 body {
     width: 100%;
     height: 100%;
-    font-family:'Ubuntu', sans-serif;
+    /*font-family:'Ubuntu', sans-serif;*/
     color: #311B44;
     background-color: #fff;
 }
@@ -23,7 +23,7 @@ h4,
 h5,
 h6 {
     margin: 0 0 35px;
-    font-family:'Ubuntu', sans-serif;
+    /*font-family:'Ubuntu', sans-serif;*/
     font-weight: 700;
     letter-spacing: 1px;
 }

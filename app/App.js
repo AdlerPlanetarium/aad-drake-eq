@@ -4,7 +4,7 @@ import EQTerm from 'components/eq-term'
 
 let App = React.createClass({
   getInitialState(){
-    return { 'rstar': null , 'fp': null , 'ne': null , 'fl': null , 'fi': null , 'fc': null , 'L': null  }
+    return { 'rstar': Data['rstar'].defaultValue , 'fp': Data['fp'].defaultValue , 'ne': Data['ne'].defaultValue , 'fl': Data['fl'].defaultValue , 'fi': Data['fi'].defaultValue , 'fc': Data['fc'].defaultValue , 'L': Data['L'].defaultValue  }
   },
 
   setUserValue(name,value){
@@ -28,37 +28,37 @@ let App = React.createClass({
   resetState(){
     var newState = {}
     Object.keys(Data).forEach(function(key){
-      newState[key] = 0
+      newState[key] = Data[key].defaultValue
     })
     this.setState(newState)
   },
 
   computeDrake(){
-    return Object.keys(this.state).map(
+    return Math.round(Object.keys(this.state).map(
       function(key){ return this.state[key]},
       this
     ).reduce(
       function(x,y){return x*y}
-    )
+    ))
   },
 
   render(){
     return (
       <div className='app'>
-        <section id="cards" >
-            <div className="row">
-                <div className="col-lg-8 col-lg-offset-2">
+        <section id='cards' >
+            <div className='row'>
+                <div className='col-lg-8 col-lg-offset-2'>
                   <br/>
-                  <button className='btn btn-primary' onClick={this.resetState}>Reset</button>
+                  <button className='btn btn-reset' onClick={this.resetState}>Reset</button>
                   <br/>
                   <nav>
                     <ul className='nav nav-pills nav-justified'>
                       <li>
-                        <p className='result'>N=</p>
-                        <p className='result'>{this.computeDrake()}</p>
+                        <p className='btn result'><i>N</i>=</p>
+                        <p className='btn value'>{this.computeDrake()}</p>
                       </li>
                       {Object.keys(Data).map(function(key){
-                        return <EQTerm key={key} name={key} value={this.state[key]} />
+                        return <EQTerm key={key} name={key} value={this.state[key]} path={this.getPath()} />
                       },this)}
                     </ul>
                   </nav>
@@ -66,7 +66,8 @@ let App = React.createClass({
                     <div style={{position: 'relative'}}>
                       {this.props.children && React.cloneElement(this.props.children, {
                         updateParent: this.setUserValue.bind(this,this.getPath()),
-                        cardData: this.getData()
+                        cardData: this.getData(),
+                        state: this.state
                       })}
                     </div>
                   </div>

@@ -23,4 +23,4 @@ render((
       <Route path='L' component={TermCard}  />
     </Route>
   </Router>
-), document.getElementById('root'))
+), document.getElementById('rstar'))
