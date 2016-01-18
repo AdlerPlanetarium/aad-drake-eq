@@ -46,33 +46,26 @@ let App = React.createClass({
     return (
       <div className='app'>
         <section id='cards' >
-            <div className='row'>
-                <div className='col-lg-8 col-lg-offset-2'>
-                  <br/>
-                  <button className='btn btn-reset' onClick={this.resetState}>Reset</button>
-                  <br/>
-                  <nav>
-                    <ul className='nav nav-pills nav-justified'>
-                      <li>
-                        <p className='result'><i>alieNs</i> =</p>
-                        <p className='result-value'>{this.computeDrake()} =</p>
-                      </li>
-                      {Object.keys(Data).map(function(key){
-                        return <EQTerm key={key} name={key} value={this.state[key]} path={this.getPath()} />
-                      },this)}
-                    </ul>
-                  </nav>
-                  <div>
-                    <div style={{position: 'relative'}}>
-                      {this.props.children && React.cloneElement(this.props.children, {
-                        updateParent: this.setUserValue.bind(this,this.getPath()),
-                        cardData: this.getData(),
-                        state: this.state
-                      })}
-                    </div>
-                  </div>
-
-            </div>
+          <nav>
+            <ul className='nav nav-pills nav-justified'>
+              <li>
+                <p className='result'><i>alieNs=</i></p>
+              </li>
+              {Object.keys(Data).map(function(key){
+                return <EQTerm key={key} name={key} value={this.state[key]} path={this.getPath()} />
+              },this)}
+              <li>
+                <p className='result'>= {this.computeDrake()}</p>
+              </li>
+            </ul>
+          </nav>
+          <div id='one-card'>
+          {this.props.children && React.cloneElement(this.props.children, {
+            resetState: this.resetState,
+            updateParent: this.setUserValue.bind(this,this.getPath()),
+            cardData: this.getData(),
+            state: this.state
+          })}
           </div>
         </section>
       </div>

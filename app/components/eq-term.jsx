@@ -27,11 +27,10 @@ let EQTerm = React.createClass({
 	render(){
     return (
         <li>
-  				<a  className='eq-term' href={this.getRoute(this.props.name)}>
-  					<p className={this.checkActive(this.props.name)} dangerouslySetInnerHTML={{__html: Data[this.props.name].displayName}}></p>
-    				<p className='btn value' dangerouslySetInnerHTML={{__html: this.formatNum(this.props.value)}}></p>
-  				</a>
-          <span className='multiply' dangerouslySetInnerHTML={this.props.name !== 'L' ? {__html: 'x'} : null}></span>
+  				<div className='eq-term'>
+  					<a className={this.checkActive(this.props.name)} dangerouslySetInnerHTML={{__html: Data[this.props.name].displayName}} href={this.getRoute(this.props.name)}></a>
+    				<p className='value' dangerouslySetInnerHTML={{__html: this.formatNum(this.props.value)}}></p>
+  				</div>
 			  </li>
 		)
 	}
