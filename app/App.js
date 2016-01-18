@@ -33,9 +33,16 @@ let App = React.createClass({
     this.setState(newState)
   },
 
+  transformNum(num, valType){
+    if(valType == 'log')
+      num = Math.pow(10,num)
+
+    return num;
+  },
+
   computeDrake(){
     return Math.round(Object.keys(this.state).map(
-      function(key){ return this.state[key]},
+      function(key){ return this.transformNum(this.state[key],Data[key].valueType)},
       this
     ).reduce(
       function(x,y){return x*y}

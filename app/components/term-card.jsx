@@ -12,12 +12,19 @@ let TermCard = React.createClass({
 	},
 
 	formatNum(num){
-		if(!num && num!==0) return '';
 
-		if(this.props.cardData.valueType == 'percentage')
-			return Math.round(100*num)+'%'
+		if(num==null)
+			return '&nbsp;'
 
-		return num
+    var valType = this.props.cardData.valueType
+
+    if(valType == 'log')
+      num = Math.pow(10,num)
+
+    if(valType == 'percentage')
+      num = 100 * num
+
+		return Math.round(num) + ( valType == 'percentage' ? '%' : '' )
 	},
 
   getRoute(key){
@@ -55,8 +62,9 @@ let TermCard = React.createClass({
 							ref='userValue'
 							required='required'
 							defaultValue={(this.props.cardData.valueType === 'percentage') ? (this.props.state[this.props.cardData.name] * 100) : this.props.state[this.props.cardData.name]}
-							min={(this.props.cardData.valueType === 'percentage') ? (this.props.cardData.estimatedMin * 100) : this.props.cardData.estimatedMin}
-							max={(this.props.cardData.valueType === 'percentage') ? (this.props.cardData.estimatedMax * 100) : this.props.cardData.estimatedMax}
+							min={(this.props.cardData.valueType == 'percentage') ? (this.props.cardData.estimatedMin * 100) : this.props.cardData.estimatedMin}
+							max={(this.props.cardData.valueType == 'percentage') ? (this.props.cardData.estimatedMax * 100) : this.props.cardData.estimatedMax}
+							step={(this.props.cardData.valueType == 'quantity') ? '1' : '0.01' }
 							onInput={this.doUpdate}>
 						</input>
 					</div>

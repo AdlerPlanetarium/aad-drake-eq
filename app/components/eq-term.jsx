@@ -7,14 +7,23 @@ let EQTerm = React.createClass({
     return '#/' + key
   },
 
+  transformNum(num, valType){
+    if(valType == 'log')
+      num = Math.pow(10,num)
+
+    if(valType == 'percentage')
+      num = 100 * num
+
+		return Math.round(num)
+  },
+
 	formatNum(num){
+
 		if(num==null)
 			return '&nbsp;'
 
-		if(Data[this.props.name].valueType == 'percentage')
-			return Math.round(100*num)+'%'
-
-		return num
+    var valType = Data[this.props.name].valueType;
+    return this.transformNum(num, valType) + ( valType=='percentage' ? '%' : '' )
 	},
 
   checkActive(key){

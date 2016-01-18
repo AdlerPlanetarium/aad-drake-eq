@@ -62,11 +62,11 @@ export default {
   'L': {
     'name': 'L',
     'displayName': 'L',
-    'valueType': 'quantity',
+    'valueType': 'log',
     'description': 'The length of time for which such civilizations release detectable signals into space',
     'backgroundImage': 'images/AAD_icons-07.svg',
-    'estimatedMin': 100,
-    'estimatedMax': 100000,
-    'defaultValue': 420
+    'estimatedMin': 0,
+    'estimatedMax': 5,
+    'defaultValue': 2.60
   } ,
 }
