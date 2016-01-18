@@ -54,8 +54,8 @@ let App = React.createClass({
                   <nav>
                     <ul className='nav nav-pills nav-justified'>
                       <li>
-                        <p className='btn result'><i>N</i>=</p>
-                        <p className='btn value'>{this.computeDrake()}</p>
+                        <p className='result'><i>alieNs</i> =</p>
+                        <p className='result-value'>{this.computeDrake()} =</p>
                       </li>
                       {Object.keys(Data).map(function(key){
                         return <EQTerm key={key} name={key} value={this.state[key]} path={this.getPath()} />

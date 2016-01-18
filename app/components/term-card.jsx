@@ -45,7 +45,7 @@ let TermCard = React.createClass({
 	render(){
 		return (
 			<ReactCSSTransitionGroup transitionName='card' transitionEnterTimeout={300} transitionLeaveTimeout={300}>
-				<div key={this.props.cardData.name} style={{backgroundImage: 'url('+this.props.cardData.backgroundImage+')'}} className='eq-term'>
+				<div key={this.props.cardData.name} style={{backgroundImage: 'url('+this.props.cardData.backgroundImage+')'}} className='term-card'>
 					<h1 dangerouslySetInnerHTML={{__html: this.props.cardData.displayName}}></h1>
 					<p>{this.props.cardData.description}</p>
 					<p style={{display: this.props.cardData.estimatedMax ? 'block' : 'none'}}>Estimates range from {this.formatNum(this.props.cardData.estimatedMin)} to {this.formatNum(this.props.cardData.estimatedMax)} </p>

@@ -1,14 +1,90 @@
-p {
-  font-size: 1.3rem !important;
+
+#rstar{ height: 100%; }
+
+.btn{
+  border-radius: 10px;
 }
 
-nav p {
-  font-size: 2em !important;
+.btn:active {
+  animation: none;
+}
+
+.btn-reset{
+  color: #E82148;
+  border: 2px solid #E82148;
+  background-color: #fff;
+  padding: 1em inherit;
+}
+
+.btn-reset:hover{
+  color: #fff;
+  background-color: #E82148;
+  opacity: 0.3;
+}
+
+.result{
+  font-size: 2em;
+  color: #E82148;
+  text-align: left;
+  margin: 0 0;
+}
+
+.result:hover{
+  color: #E82148;
+}
+
+.result-value{
+  font-size: 1.5em;
+  color: black;
+  text-align: left;
+  margin: 0 0;
 }
 
 .eq-term{
-  border-radius: 20px;
-  padding: 1em;
+  display: inline !important;
+}
+
+.btn-term{
+  font-size: 1.5em;
+  font-style: italic;
+  background-color: #662D91;
+  color: white;
+  width: 2em;
+}
+
+.btn-term:hover{
+  background-color: #662D91;
+  color: white;
+  opacity: 0.3;
+}
+
+.btn-term-active{
+  font-size: 1.5em;
+  font-style: italic;
+  background-color: #E82148;
+  color: white;
+  width: 2em;
+}
+
+.btn-term-active:hover{
+  background-color: #E82148;
+  color: white;
+  opacity: 0.3;
+}
+
+.multiply{
+  color: gray;
+  display: inline !important;
+}
+
+.value{
+  font-size: 1.5em;
+  color: black;
+}
+
+.term-card{
+  border-radius: 10px;
+  padding: 1.5em;
   height: 60%;
   background-size: 50%;
   background-repeat: no-repeat;
@@ -21,9 +97,20 @@ nav p {
   width: 100%;
   background-color: #662d91;
 }
-.eq-term input{
+
+.term-card input{
   color: black;
   width: 50%;
+}
+
+.term-card h1{
+  font-size: 3em;
+  font-style: italic;
+}
+
+.term-card p{
+  font-size: 1em;
+  font-style: italic;
 }
 
 .card-enter{
@@ -44,38 +131,6 @@ nav p {
   transition: opacity 300ms ease-in;
 }
 
-.btn{
-  border-radius: 8px;
-}
-
-.btn:active {
-  animation: none;
-}
-
-.btn-reset{
-  color: #E82148;
-  border: 2px solid #E82148;
-  background-color: #fff;
-  padding: 1em inherit;
-}
-
-.btn-reset:hover{
-  color: #fff;
-  background-color: #E82148;
-  opacity: 0.3;
-}
-
-.prev-button{
-  position: absolute;
-  bottom: 1em;
-}
-
-.next-button{
-  position: absolute;
-  bottom: 1em;
-  right: 1em;
-}
-
 .btn-default{
   background-color: hsla(0, 0%, 100%, 0.3) !important;
   color: white;
@@ -87,47 +142,13 @@ nav p {
   color: white;
 }
 
-.btn-term{
-  background-color: #662D91;
-  color: white;
-  font-style: italic;
-  width: 2em;
+.prev-button{
+  position: absolute;
+  bottom: 1.5em;
 }
 
-.btn-term:hover{
-  background-color: #662D91;
-  color: white;
-  opacity: 0.3;
+.next-button{
+  position: absolute;
+  bottom: 1.5em;
+  right: 1.5em;
 }
-
-.btn-term-active{
-  background-color: #E82148;
-  color: white;
-  font-style: italic;
-  width: 2em;
-}
-
-.btn-term-active:hover{
-  background-color: #E82148;
-  color: white;
-  opacity: 0.3;
-}
-
-.result{
-  color: #E82148;
-  letter-spacing: 7px;
-}
-
-.result:hover{
-  color: #E82148;
-}
-
-.value{
-  color: black;
-}
-
-.multiply{
-  color: gray;
-}
-
-#rstar{ height: 100%; }

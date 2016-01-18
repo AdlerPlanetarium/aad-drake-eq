@@ -27,7 +27,7 @@ let EQTerm = React.createClass({
 	render(){
     return (
         <li>
-  				<a href={this.getRoute(this.props.name)}>
+  				<a  className='eq-term' href={this.getRoute(this.props.name)}>
   					<p className={this.checkActive(this.props.name)} dangerouslySetInnerHTML={{__html: Data[this.props.name].displayName}}></p>
     				<p className='btn value' dangerouslySetInnerHTML={{__html: this.formatNum(this.props.value)}}></p>
   				</a>
