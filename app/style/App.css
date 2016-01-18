@@ -152,3 +152,7 @@
   bottom: 1.5em;
   right: 1.5em;
 }
+
+body{
+  font-family: Montserrat, Helvetica, Arial, sans-serif !important;
+}
