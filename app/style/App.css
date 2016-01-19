@@ -11,12 +11,23 @@
   border: 2px solid #E82148;
   background-color: #fff;
   padding: 1em inherit;
+  display: inline;
 }
 
 .btn-reset:hover{
   color: #fff;
   background-color: #E82148;
   opacity: 0.3;
+}
+
+.center-button{
+  position: absolute;
+  bottom: 1.5em;
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
+  text-align: center;
 }
 
 .result{
@@ -108,7 +119,7 @@ ul.nav .btn{ padding: 0 !important; }
 }
 
 .term-card p{
-  font-size: 1em;
+  font-size: 1.5em;
   font-style: italic;
 }
 

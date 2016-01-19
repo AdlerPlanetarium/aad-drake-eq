@@ -69,9 +69,9 @@ let TermCard = React.createClass({
 						</input>
 					</div>
 					<br/>
-          <button className='btn btn-reset' onClick={this.props.resetState}>Reset</button>
 					<br clear="all"/>
 					<a className='btn btn-default prev-button' href={this.getPreviousRoute()}>&laquo; Previous</a>
+					<div className='center-button'><a className='btn btn-reset' href="/" onClick={this.props.resetState}>Start Over</a></div>
 					<a className='btn btn-default next-button' href={this.getNextRoute()}>Next &raquo;</a>
 				</div>
 			</ReactCSSTransitionGroup>
