@@ -10,6 +10,7 @@ require('expose?$!expose?jQuery!jquery')
 require('bootstrap-webpack')
 require('style/app.css')
 require('style/AADcustom.css')
+require('style/reset_slider.css')
 
 render((
   <Router>
