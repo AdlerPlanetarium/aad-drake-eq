@@ -1,100 +1,192 @@
-ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
+.btn{
+  border-radius: 10px;
 }
 
-li a {
-    display: block;
-    text-align: center;
-    text-decoration: none;
+.btn:active {
+  animation: none;
 }
 
-h1 {font-style: italic; }
+.btn-reset{
+  color: #E82148;
+  border: 2px solid #E82148;
+  background-color: #fff;
+  padding: 1em inherit;
+  display: inline;
+}
 
-.eq-term {
-  border-radius: 20px;
-  padding: 1em;
-  height: 60%;
-  background-size: cover;
+.btn-reset:hover{
+  color: #fff;
+  background-color: #E82148;
+  opacity: 0.3;
+}
+
+.center-button{
+  position: absolute;
+  bottom: 1.5em;
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
+  text-align: center;
+}
+
+.result{
+  font-size: 2em;
+  color: #E82148;
+  margin: 0 0;
+}
+
+.result:hover{
+  color: #E82148;
+}
+
+.result-value{
+  font-size: 1.5em;
+  color: black;
+  text-align: left;
+  margin: 0 0;
+}
+
+ul.nav .btn{ padding: 0 !important; }
+
+.btn-term{
+  font-size: 1.5em;
+  font-style: italic;
+  background-color: #662D91;
   color: white;
-  min-height: 400px;
+  width: 2.5em;
+  height: 2.5em;
+  line-height: 2.5em;
+  text-align: center;
+}
+
+.btn-term:hover{
+  background-color: #662D91;
+  color: white;
+  opacity: 0.7;
+}
+
+.btn-term-active{
+  font-size: 1.5em;
+  font-style: italic;
+  background-color: #E82148;
+  color: white;
+  width: 2.5em;
+  height: 2.5em;
+  line-height: 2.5em;
+  text-align: center;
+}
+
+.btn-term-active:hover{
+  background-color: #E82148;
+  color: white;
+  opacity: 0.7;
+}
+
+.multiply{
+  color: gray;
+  display: inline !important;
+}
+
+.value{
+  font-size: 1.5em;
+  color: black;
+}
+
+.term-card{
+  border-radius: 10px;
+  padding: 1.5em;
+  background-size: 50%;
+  background-repeat: no-repeat;
+  background-position: bottom right;
+  color: white;
   position: absolute;
   top: 0;
   left: 0;
-  width: 100%;
-}
-.eq-term input {
-  color: black;
-}
-
-button.button-primary:focus,
-a.button.button-primary:focus,
-button.button-primary,
-a.button.button-primary{
-  background-color: hsla(0,0%,100%,0.6);
-  color: black;
-  border: 0;
+  width: 90%;
+  background-color: #662d91;
+  margin: 0 5%;
+  height: 90%;
 }
 
-button.button-primary:visited,
-a.button.button-primary:visited,
-button.button-primary:hover,
-a.button.button-primary:hover,
-button.button-primary:active,
-a.button.button-primary:active{
-  background-color: white;
-  color: #444;
+.term-card input{
+  width: 70%;
 }
 
-.pctLabel{
-  position: relative;
-  left: -2.5em;
-  color: black;
+.term-card h1{
+  font-size: 3em;
+  font-style: italic;
 }
 
-.card-enter {
+.term-card p{
+  font-size: 1.5em;
+  font-style: italic;
+}
+
+.card-enter{
   opacity: 0.01;
 }
 
-.card-enter.card-enter-active {
+.card-enter.card-enter-active{
   opacity: 1;
   transition: opacity 300ms ease-in;
 }
 
-.card-leave {
+.card-leave{
   opacity: 1;
 }
 
-.card-leave.card-leave-active {
+.card-leave.card-leave-active{
   opacity: 0.01;
   transition: opacity 300ms ease-in;
 }
-/*
-nav .column{ position: relative; }
 
-nav .column::after{
-  content: 'x';
-  position: absolute;
-  top: 0;
-  right: -2.5em;
+.btn-default{
+  background-color: hsla(0, 0%, 100%, 0.3) !important;
+  color: white;
+  border: 0 !important;
 }
-*/
 
-nav .column{
-  margin-left: 0 !important;
-  width: 8.666667% !important;
+.btn-default:hover{
+  background-color: hsla(0,0%, 100%, 0.6) !important;
+  color: white;
 }
 
 .prev-button{
   position: absolute;
-  bottom: 1em;
-  left: 2em;
+  bottom: 1.5em;
 }
 
 .next-button{
   position: absolute;
-  bottom: 1em;
-  right: 2em;
+  bottom: 1.5em;
+  right: 1.5em;
 }
+
+body{
+  font-family: Montserrat, Helvetica, Arial, sans-serif !important;
+}
+
+p{
+  font-family: Ubuntu, Montserrat, Helvetica, Arial, sans-serif !important;
+}
+
+:target{ font-weight: bold !important; }
+
+nav{ width: 90%; margin: 0 5%; }
+
+.not-intro{ height: 100%; position: relative; padding-bottom: 50px; }
+
+#rstar{ height: 100%; }
+footer{ height: 50px; position: absolute; bottom: 0; width: 90%; margin: 0 5%; overflow: hidden; }
+.app{ height: 100%; }
+#cards{ height: 100%; display: flex; flex-flow: column nowrap; justify-content: space-around;}
+#cards nav{ flex-grow: 1; flex-shrink: 0; padding: 0; padding-top: 3em; }
+#one-card{ position: relative; flex-grow: 100 }
+
+.eq-term{ text-align: center; }
+
+ul.nav{ display: flex; flex-flow: row nowrap; }
+ul.nav li{ display: block; flex-grow: 1; text-align: center; }
+
+ul.nav li:first-child{ text-align: right; }
