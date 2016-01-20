@@ -22,10 +22,10 @@ export default {
   'ne': {
     'name': 'ne',
     'displayName': 'n<sub>e</sub>',
-    'valueType': 'quantity',
+    'valueType': 'fraction',
     'description': 'The average number of planets that can potentially support life per star that has planets',
     'backgroundImage': 'images/AAD_icons-03.svg',
-    'estimatedMin': 0,
+    'estimatedMin': 0.01,
     'estimatedMax': 4,
     'defaultValue': 1
   } ,

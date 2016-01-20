@@ -70,9 +70,9 @@ let TermCard = React.createClass({
 					</div>
 					<br/>
 					<br clear="all"/>
-					<a className='btn btn-default prev-button' href={this.getPreviousRoute()}>&laquo; Previous</a>
+					<a style={{display: this.props.cardData.name == 'rstar' ? 'none' : 'inherit'}} className='btn btn-default prev-button' href={this.getPreviousRoute()}>&laquo; Previous</a>
 					<div className='center-button'><a className='btn btn-reset' href="http://adlerplanetarium.github.io/aad-drake-eq/dist/" onClick={this.props.resetState}>Start Over</a></div>
-					<a className='btn btn-default next-button' href={this.getNextRoute()}>Next &raquo;</a>
+					<a style={{display: this.props.cardData.name == 'L' ? 'none' : 'inherit'}} className='btn btn-default next-button' href={this.getNextRoute()}>Next &raquo;</a>
 				</div>
 			</ReactCSSTransitionGroup>
 		)

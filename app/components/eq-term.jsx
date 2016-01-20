@@ -14,6 +14,9 @@ let EQTerm = React.createClass({
     if(valType == 'percentage')
       num = 100 * num
 
+    if(valType == 'fraction')
+      return num
+
 		return Math.round(num)
   },
 
