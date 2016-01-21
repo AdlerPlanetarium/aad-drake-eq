@@ -4,7 +4,7 @@ export default {
     'displayName': 'R<sub>*</sub>',
     'valueType': 'quantity',
     'description': 'The average rate of star formation in our galaxy',
-    'backgroundImage': 'images/AAD_icons-01.svg',
+    'backgroundImage': 'images/AAD_icons-01_PURP.svg',
     'estimatedMin': 1,
     'estimatedMax': 20,
     'defaultValue': 10
@@ -14,7 +14,7 @@ export default {
     'displayName': 'f<sub>p</sub>',
     'valueType': 'percentage',
     'description': 'The fraction of stars that have planets',
-    'backgroundImage': 'images/AAD_icons-02.svg',
+    'backgroundImage': 'images/AAD_icons-02_PURP.svg',
     'estimatedMin': 0.4,
     'estimatedMax': 1.0,
     'defaultValue': 0.7
@@ -24,7 +24,7 @@ export default {
     'displayName': 'n<sub>e</sub>',
     'valueType': 'fraction',
     'description': 'The average number of planets that can potentially support life per star that has planets',
-    'backgroundImage': 'images/AAD_icons-03.svg',
+    'backgroundImage': 'images/AAD_icons-03_PURP.svg',
     'estimatedMin': 0.01,
     'estimatedMax': 4,
     'defaultValue': 1
@@ -34,7 +34,7 @@ export default {
     'displayName': 'f<sub>l</sub>',
     'valueType': 'percentage',
     'description': 'The fraction of planets that could support life that actually develop life at some point',
-    'backgroundImage': 'images/AAD_icons-04.svg',
+    'backgroundImage': 'images/AAD_icons-04_PURP.svg',
     'estimatedMin': 0.0,
     'estimatedMax': 1.0,
     'defaultValue': 0.5
@@ -44,7 +44,7 @@ export default {
     'displayName': 'f<sub>i</sub>',
     'valueType': 'percentage',
     'description': 'The fraction of planets with life that actually go on to develop intelligent life (civilizations)',
-    'backgroundImage': 'images/AAD_icons-05.svg',
+    'backgroundImage': 'images/AAD_icons-05_PURP.svg',
     'estimatedMin': 0.0,
     'estimatedMax': 1.0,
     'defaultValue': 0.5
@@ -54,7 +54,7 @@ export default {
     'displayName': 'f<sub>c</sub>',
     'valueType': 'percentage',
     'description': 'The fraction of civilizations that develop a technology that releases detectable signs of their existence into space',
-    'backgroundImage': 'images/AAD_icons-06.svg',
+    'backgroundImage': 'images/AAD_icons-06_PURP.svg',
     'estimatedMin': 0.05,
     'estimatedMax': 0.50,
     'defaultValue': 0.30
@@ -64,7 +64,7 @@ export default {
     'displayName': 'L',
     'valueType': 'log',
     'description': 'The length of time for which such civilizations release detectable signals into space',
-    'backgroundImage': 'images/AAD_icons-07.svg',
+    'backgroundImage': 'images/AAD_icons-07_PURP.svg',
     'estimatedMin': 0,
     'estimatedMax': 5,
     'defaultValue': 2.60
