@@ -24,6 +24,9 @@ let TermCard = React.createClass({
     if(valType == 'percentage')
       num = 100 * num
 
+		if(valType == 'fraction')
+      return num
+
 		return Math.round(num) + ( valType == 'percentage' ? '%' : '' )
 	},
 
@@ -56,7 +59,7 @@ let TermCard = React.createClass({
 					<h1 dangerouslySetInnerHTML={{__html: this.props.cardData.displayName}}></h1>
 					<p>{this.props.cardData.description}</p>
 					<p style={{display: this.props.cardData.estimatedMax ? 'block' : 'none'}}>Estimates range from {this.formatNum(this.props.cardData.estimatedMin)} to {this.formatNum(this.props.cardData.estimatedMax)}.</p>
-					<p>What's your estimate?  Adjust the slider below accordingly...</p>
+					<p>What's your estimate?  Use the slider below...</p>
 					<div>
 						<input
 							type='range'
@@ -69,7 +72,8 @@ let TermCard = React.createClass({
 							onInput={this.doUpdate}>
 						</input>
 					</div>
-					<br/>
+					<p className='slider-min' dangerouslySetInnerHTML={{__html: this.formatNum(this.props.cardData.estimatedMin)}}></p>
+					<p className='slider-max' dangerouslySetInnerHTML={{__html: this.formatNum(this.props.cardData.estimatedMax)}}></p>
 					<br clear="all"/>
 					<a style={{display: this.props.cardData.name == 'rstar' ? 'none' : 'inherit'}} className='btn btn-default prev-button' href={this.getPreviousRoute()}>&laquo; Previous</a>
 					<div className='center-button'><a className='btn btn-reset' href="http://adlerplanetarium.github.io/aad-drake-eq/dist/" onClick={this.props.resetState}>Start Over</a></div>

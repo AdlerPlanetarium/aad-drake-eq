@@ -190,3 +190,12 @@ ul.nav{ display: flex; flex-flow: row nowrap; }
 ul.nav li{ display: block; flex-grow: 1; text-align: center; }
 
 ul.nav li:first-child{ text-align: right; }
+
+
+.slider-min{
+  float: left;
+}
+
+.slider-max{
+  float: right;
+}
