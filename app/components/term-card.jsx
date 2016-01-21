@@ -55,7 +55,8 @@ let TermCard = React.createClass({
 				<div key={this.props.cardData.name} style={{backgroundImage: 'url('+this.props.cardData.backgroundImage+')'}} className='term-card chrome safari firefox ie'>
 					<h1 dangerouslySetInnerHTML={{__html: this.props.cardData.displayName}}></h1>
 					<p>{this.props.cardData.description}</p>
-					<p style={{display: this.props.cardData.estimatedMax ? 'block' : 'none'}}>Estimates range from {this.formatNum(this.props.cardData.estimatedMin)} to {this.formatNum(this.props.cardData.estimatedMax)} </p>
+					<p style={{display: this.props.cardData.estimatedMax ? 'block' : 'none'}}>Estimates range from {this.formatNum(this.props.cardData.estimatedMin)} to {this.formatNum(this.props.cardData.estimatedMax)}.</p>
+					<p>What's your estimate?  Adjust the slider below accordingly...</p>
 					<div>
 						<input
 							type='range'
